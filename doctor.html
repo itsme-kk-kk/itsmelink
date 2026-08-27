@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4efe7" />
+    <meta name="description" content="잇츠미의 나만의닥터 초대코드와 앱 다운로드 안내" />
+    <meta property="og:title" content="잇츠미의 나만의닥터 초대" />
+    <meta property="og:description" content="전용 초대코드 itsme2026" />
+    <meta property="og:type" content="website" />
+    <title>나만의닥터 초대 | 잇츠미</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Jua&family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell detail-shell">
+      <header class="topbar">
+        <a class="back-link" href="./index.html" aria-label="메인 페이지로 돌아가기">← 돌아가기</a>
+      </header>
+
+      <section class="detail-content minimal-detail" aria-label="나만의닥터 초대 정보">
+        <div class="invite-card">
+          <p class="invite-label">전용 초대코드</p>
+          <div class="code-row">
+            <strong class="invite-code" id="inviteCode">itsme2026</strong>
+            <button class="copy-button" id="copyCode" type="button">코드 복사</button>
+          </div>
+          <p class="invite-note">신규 가입 회원 전용 기능으로, 가입한 지 7일 이내인 계정만 초대코드를 사용할 수 있습니다.</p>
+        </div>
+
+        <a class="download-link" href="https://surl.my-doctor.io/VtXLBs" target="_blank" rel="noreferrer">
+          <span class="download-copy"><strong>나만의닥터 앱 다운로드</strong><small>surl.my-doctor.io/VtXLBs</small></span>
+          <span class="download-arrow" aria-hidden="true">↗</span>
+        </a>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">초대코드를 복사했어요!</div>
+    <script src="./doctor.js"></script>
+  </body>
+</html>

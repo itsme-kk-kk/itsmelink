@@ -1,0 +1,55 @@
+:root { color-scheme: light; --paper: #f7f6f2; --ink: #26358f; --text: #252a4a; --muted: #7379aa; --line: #5968b9; --accent: #ff7b73; --soft: #e9ebf8; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--paper); color: var(--text); font-family: "DM Sans", "Noto Sans KR", sans-serif; }
+.page-shell { position: relative; width: min(100% - 28px, 430px); min-height: 100vh; margin: 0 auto; padding: 22px 0 28px; }
+.topbar, footer { display: flex; align-items: center; justify-content: space-between; }
+.tiny-mark { color: #a1a5c3; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.16em; }
+.wordmark { color: var(--ink); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.15em; text-decoration: none; }
+.wordmark span, footer span { color: var(--accent); }
+.icon-button { display: grid; place-items: center; width: 36px; height: 36px; padding: 0; border: 1.5px solid var(--line); border-radius: 50%; background: transparent; color: var(--ink); font: 500 1rem inherit; cursor: pointer; transition: background 160ms ease, color 160ms ease, transform 160ms ease; }
+.icon-button:hover { background: var(--ink); color: #fff; transform: rotate(8deg); }
+.profile { padding: 76px 0 38px; text-align: center; }
+.profile-image-wrap { display: grid; place-items: center; width: 126px; height: 126px; margin: 0 auto 20px; overflow: hidden; border-radius: 50%; background: var(--accent); box-shadow: 0 8px 0 rgba(38, 53, 143, 0.09); }
+.profile-image { width: 116px; height: 116px; margin-top: 12px; object-fit: contain; }
+.cute-name { margin: 0; color: var(--ink); font-family: "Jua", "Noto Sans KR", sans-serif; font-size: 1.72rem; font-weight: 400; line-height: 1.15; letter-spacing: 0.015em; }
+.account-id { margin: 8px 0 0; color: var(--muted); font-family: "DM Sans", sans-serif; font-size: 0.82rem; font-weight: 500; letter-spacing: 0.025em; }
+.links { display: grid; gap: 14px; }
+.link-card { display: grid; grid-template-columns: 1fr 32px; align-items: center; min-height: 58px; padding: 10px 12px 10px 44px; border: 1.5px solid var(--line); border-radius: 9px; background: transparent; color: var(--ink); text-decoration: none; box-shadow: 0 2px 0 rgba(89, 104, 185, 0.13); transition: background 160ms ease, color 160ms ease, transform 160ms ease; }
+.link-card:hover { background: var(--ink); color: #fff; transform: translateY(-2px); }
+.card-copy { text-align: center; }
+.card-copy strong { font-family: "Jua", "Noto Sans KR", sans-serif; font-size: 1.02rem; font-weight: 400; }
+.card-arrow { display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid currentColor; border-radius: 50%; font-size: 0.75rem; }
+.instagram-link { display: grid; grid-template-columns: 30px 1fr auto; align-items: center; gap: 10px; margin-top: 92px; padding: 14px 15px; border-top: 1px solid #d9dbeb; border-bottom: 1px solid #d9dbeb; color: var(--ink); font-size: 0.8rem; font-weight: 700; text-decoration: none; transition: background 160ms ease, padding 160ms ease; }
+.instagram-link:hover { background: var(--soft); padding-left: 18px; padding-right: 18px; }
+.instagram-icon { position: relative; display: block; width: 27px; height: 27px; border: 1.8px solid currentColor; border-radius: 8px; }
+.instagram-icon::before { content: ""; position: absolute; inset: 6px; border: 1.7px solid currentColor; border-radius: 50%; }
+.instagram-icon::after { content: ""; position: absolute; top: 4px; right: 4px; width: 3px; height: 3px; border-radius: 50%; background: currentColor; }
+.instagram-link small { color: var(--muted); font-size: 0.65rem; font-weight: 500; }
+footer { margin-top: 108px; padding-top: 16px; border-top: 1px solid #d9dbeb; color: #969abb; font-size: 0.56rem; font-weight: 600; letter-spacing: 0.09em; }
+.toast { position: fixed; left: 50%; bottom: 24px; z-index: 5; padding: 11px 17px; border-radius: 999px; background: var(--ink); color: #fff; font-size: 0.76rem; opacity: 0; transform: translate(-50%, 10px); transition: opacity 180ms ease, transform 180ms ease; pointer-events: none; }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+.detail-shell { min-height: 100vh; }
+.back-link { display: inline-flex; align-items: center; gap: 7px; color: var(--ink); font-size: 0.75rem; font-weight: 700; text-decoration: none; }
+.detail-content { padding: 42px 0 14px; text-align: center; }
+.minimal-detail { padding-top: 92px; }
+.detail-quokka { width: 86px; height: 86px; margin: 0 auto 8px; object-fit: contain; }
+.detail-kicker { margin: 0 0 11px; color: var(--muted); font-size: 0.61rem; font-weight: 700; letter-spacing: 0.15em; }
+.detail-title { margin: 0; color: var(--ink); font-family: "Jua", "Noto Sans KR", sans-serif; font-size: clamp(1.75rem, 7vw, 2.4rem); font-weight: 400; line-height: 1.2; word-break: keep-all; }
+.detail-intro { margin: 11px 0 28px; color: var(--muted); font-size: 0.83rem; line-height: 1.6; }
+.invite-card { padding: 21px; border: 1.5px solid var(--line); border-radius: 10px; background: transparent; text-align: left; box-shadow: 0 2px 0 rgba(89, 104, 185, 0.13); }
+.invite-label { margin: 0 0 8px; color: var(--muted); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.11em; }
+.code-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.invite-code { color: var(--ink); font-size: clamp(1.5rem, 7vw, 2rem); font-weight: 700; letter-spacing: 0.025em; }
+.copy-button { flex: 0 0 auto; padding: 9px 13px; border: 1px solid var(--line); border-radius: 999px; background: var(--soft); color: var(--ink); font: 700 0.69rem "Noto Sans KR", sans-serif; cursor: pointer; }
+.copy-button:hover { background: var(--ink); color: #fff; }
+.invite-note { margin: 16px 0 0; padding-top: 15px; border-top: 1px solid #d9dbeb; color: var(--muted); font-size: 0.71rem; line-height: 1.65; word-break: keep-all; }
+.download-link { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; padding: 16px 16px 16px 20px; border: 1.5px solid var(--line); border-radius: 9px; background: transparent; color: var(--ink); text-align: left; text-decoration: none; box-shadow: 0 2px 0 rgba(89, 104, 185, 0.13); transition: background 160ms ease, color 160ms ease, transform 160ms ease; }
+.download-link:hover { background: var(--ink); color: #fff; transform: translateY(-2px); }
+.download-copy { display: grid; gap: 4px; }
+.download-copy strong { font-family: "Jua", "Noto Sans KR", sans-serif; font-size: 0.98rem; font-weight: 400; }
+.download-copy small { color: var(--muted); font-size: 0.67rem; }
+.download-link:hover small { color: #cbd0f2; }
+.download-arrow { display: grid; place-items: center; width: 29px; height: 29px; border: 1px solid currentColor; border-radius: 50%; font-size: 0.74rem; }
+@media (max-width: 420px) { .page-shell { width: min(100% - 24px, 430px); padding-top: 16px; } .profile { padding-top: 36px; } footer { margin-top: 86px; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; } }
